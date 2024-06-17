@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: f6a9731ac7b5159b2b4542732abcda8f900c3e35
+    - imageTag: 361dd8da2001bb29afcab4332ac1aab785972f6d
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -23,10 +23,12 @@ spec:
       imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/coffee-catalog-service
       credentialId: credential_ab11a1fb-aae1-4082-803a-71f10b238b12
       commitDetails:
-        commitHash: f6a9731ac7b5159b2b4542732abcda8f900c3e35
+        commitHash: 361dd8da2001bb29afcab4332ac1aab785972f6d
         commitAvatar: https://github.com/iwiick.png
-        commitTime: 2024-06-17T10:57:25 05:30
-        commitMessage: Delete .github/workflows/container-dev_app_8654f20_env_89269fe.yaml
+        commitTime: 2024-06-17T10:57:43 05:30
+        commitMessage: >-
+          Delete
+          .github/workflows/container-staging_app_8654f20_env_28f618a.yaml
         commitUser: iwiick
   minReplicas: 1
   maxReplicas: 1
