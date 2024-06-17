@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: order-v1-0-0
+    applicationId: app_9a8abf89-baa4-4ee8-9dc3-919c87aaa84d
+    version: v1.0.0
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+  name: order-v1-0-0
+spec:
+  selector:
+    app: order-v1-0-0
