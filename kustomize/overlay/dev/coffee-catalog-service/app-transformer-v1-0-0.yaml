@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: 08e59a8d770c9ee30836808236e31d2b80d9fcd1
+    - imageTag: latest
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -21,13 +21,7 @@ spec:
       name: coffee-catalog-service-main
       imagePullPolicy: Always
       imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/coffee-catalog-service
-      credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
-      commitDetails:
-        commitHash: 08e59a8d770c9ee30836808236e31d2b80d9fcd1
-        commitAvatar: https://github.com/skyu-v2-dev[bot].png
-        commitTime: '2024-06-17T03:45:04Z'
-        commitMessage: SkyU container Template Workflows Created
-        commitUser: skyu-v2-dev[bot]
+      credentialId: credential_ab11a1fb-aae1-4082-803a-71f10b238b12
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
@@ -37,10 +31,10 @@ spec:
   labels:
     app: coffee-catalog-service
     version: v1.0.0
-    applicationId: app_e55def34-7cc9-49b5-a8ee-0c9b5bc3b0ac
-    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    applicationId: app_8654f202-8484-4d89-aa30-7c169fed96fa
+    projectId: project_2db65eb5-fb3b-48f3-a016-1edf7e9e473c
     organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
-    environmentId: env_31ddbbde-7bfc-4d60-89f4-920f8e416be0
+    environmentId: env_89269fe4-4d15-47ea-b6ea-94e25be133b2
     environmentName: dev
   horizontalAutoScalingRules: []
   volumes: []
@@ -48,4 +42,4 @@ spec:
   name: coffee-catalog-service
   serviceType: ClusterIP
   version: v1.0.0
-  namespace: iwiick-brean-and-brew-dev
+  namespace: iwiick-brean-and-brew-local-dev
