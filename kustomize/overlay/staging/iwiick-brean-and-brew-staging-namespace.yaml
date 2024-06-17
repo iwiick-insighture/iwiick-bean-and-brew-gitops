@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: iwiick-brean-and-brew-staging
+  labels:
+    environmentId: env_1a87bd72-0386-4592-aa0d-74a082510bbc
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    projectName: iwiick-brean-and-brew
+    environmentName: staging
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
