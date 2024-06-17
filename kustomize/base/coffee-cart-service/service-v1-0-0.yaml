@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: coffee-cart-service-v1-0-0
+    applicationId: app_e164119f-4a26-4be8-a0b5-c1f05eea1420
+    version: v1.0.0
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+  name: coffee-cart-service-v1-0-0
+spec:
+  selector:
+    app: coffee-cart-service-v1-0-0
