@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: latest
+    - imageTag: 68b15e87e517f652559af675a0bcb8909333a213
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -22,6 +22,12 @@ spec:
       imagePullPolicy: Always
       imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/catalog
       credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
+      commitDetails:
+        commitHash: 68b15e87e517f652559af675a0bcb8909333a213
+        commitTime: ''
+        commitUser: ''
+        commitAvatar: https://github.com/.png
+        commitMessage: SkyU container Template Workflows Created
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
