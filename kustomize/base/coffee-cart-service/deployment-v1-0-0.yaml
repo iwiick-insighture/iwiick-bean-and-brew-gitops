@@ -4,10 +4,10 @@ metadata:
   name: coffee-cart-service-v1-0-0
   labels:
     app: coffee-cart-service-v1-0-0
-    applicationId: app_e164119f-4a26-4be8-a0b5-c1f05eea1420
+    applicationId: app_6f75d8cd-0b9b-402f-8ee6-ae6f28aae89a
     version: v1.0.0
     organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
-    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    projectId: project_2db65eb5-fb3b-48f3-a016-1edf7e9e473c
   annotations:
     reloader.stakater.com/auto: 'true'
 spec:
@@ -18,7 +18,7 @@ spec:
     metadata:
       labels:
         app: coffee-cart-service-v1-0-0
-        applicationId: app_e164119f-4a26-4be8-a0b5-c1f05eea1420
+        applicationId: app_6f75d8cd-0b9b-402f-8ee6-ae6f28aae89a
         version: v1.0.0
         organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
-        projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+        projectId: project_2db65eb5-fb3b-48f3-a016-1edf7e9e473c
