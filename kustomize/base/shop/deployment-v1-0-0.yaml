@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop-v1-0-0
+  labels:
+    app: shop-v1-0-0
+    applicationId: app_5cd994ca-6334-4fa0-a4c1-55c4e43a689d
+    version: v1.0.0
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+  annotations:
+    reloader.stakater.com/auto: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: shop-v1-0-0
+  template:
+    metadata:
+      labels:
+        app: shop-v1-0-0
+        applicationId: app_5cd994ca-6334-4fa0-a4c1-55c4e43a689d
+        version: v1.0.0
+        organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+        projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
