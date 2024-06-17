@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: iwiick-brean-and-brew-local-dev
+  labels:
+    environmentId: env_89269fe4-4d15-47ea-b6ea-94e25be133b2
+    projectId: project_2db65eb5-fb3b-48f3-a016-1edf7e9e473c
+    projectName: iwiick-brean-and-brew-local
+    environmentName: dev
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
