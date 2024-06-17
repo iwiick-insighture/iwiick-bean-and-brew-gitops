@@ -21,7 +21,7 @@ spec:
       name: coffee-user-service-main
       imagePullPolicy: Always
       imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/coffee-user-service
-      credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
+      credentialId: credential_ab11a1fb-aae1-4082-803a-71f10b238b12
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
@@ -31,10 +31,10 @@ spec:
   labels:
     app: coffee-user-service
     version: v1.0.0
-    applicationId: app_9647188c-fbb2-47f7-80b7-34cc264e2c95
-    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    applicationId: app_3e895955-403a-4e75-a839-d6b85801f37d
+    projectId: project_2db65eb5-fb3b-48f3-a016-1edf7e9e473c
     organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
-    environmentId: env_055fba93-58d5-43d7-aaad-c684411e22b9
+    environmentId: env_2f8d71c0-01e8-4ae7-8cf4-4d209df82192
     environmentName: prod
   horizontalAutoScalingRules: []
   volumes: []
@@ -42,4 +42,4 @@ spec:
   name: coffee-user-service
   serviceType: ClusterIP
   version: v1.0.0
-  namespace: iwiick-brean-and-brew-prod
+  namespace: iwiick-brean-and-brew-local-prod
