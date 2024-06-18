@@ -8,8 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: latest
-      cpuRequestMili: 100
+    - cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
       memoryLimitMb: 450
@@ -21,7 +20,6 @@ spec:
       name: shop-main
       imagePullPolicy: Always
       credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
-      imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/iwiick
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
