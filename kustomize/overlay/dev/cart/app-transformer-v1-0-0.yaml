@@ -16,7 +16,12 @@ spec:
       args: []
       command: []
       configMounts: []
-      applicationPorts: []
+      applicationPorts:
+        - port: 5002
+          targetPort: 5002
+          protocol: TCP
+          apiSpec:
+            gitPath: swagger-specification.yml
       healthChecks: []
       name: cart-main
       imagePullPolicy: Always
