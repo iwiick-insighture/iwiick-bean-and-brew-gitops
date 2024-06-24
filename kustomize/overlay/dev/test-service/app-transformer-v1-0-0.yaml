@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: 45db16195cf663b8381bb6440c2106337f6546a4
+    - imageTag: 287f671866e083fd435bfca519c7e51e1180a539
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -23,11 +23,11 @@ spec:
       imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/test-service
       credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
       commitDetails:
-        commitHash: 45db16195cf663b8381bb6440c2106337f6546a4
-        commitAvatar: https://github.com/skyu-v2-dev[bot].png
-        commitTime: '2024-06-19T08:38:54Z'
-        commitMessage: Initiate test-app application
-        commitUser: skyu-v2-dev[bot]
+        commitHash: 287f671866e083fd435bfca519c7e51e1180a539
+        commitAvatar: https://github.com/iwiick.png
+        commitTime: 2024-06-24T12:10:32 05:30
+        commitMessage: Create test.yaml
+        commitUser: iwiick
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
