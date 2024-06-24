@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: 8e2d9abf22c7297d087d4502271ba6631c03b664
+    - imageTag: 1678a85faeb3946620f2ccfbcee7f6f08c309cc0
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -23,9 +23,9 @@ spec:
       imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/order
       credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
       commitDetails:
-        commitHash: 8e2d9abf22c7297d087d4502271ba6631c03b664
+        commitHash: 1678a85faeb3946620f2ccfbcee7f6f08c309cc0
         commitAvatar: https://github.com/skyu-v2-dev[bot].png
-        commitTime: '2024-06-24T06:26:17Z'
+        commitTime: '2024-06-24T06:31:39Z'
         commitMessage: Update swagger documentation
         commitUser: skyu-v2-dev[bot]
   minReplicas: 1
