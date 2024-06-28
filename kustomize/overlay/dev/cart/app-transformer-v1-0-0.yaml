@@ -54,4 +54,4 @@ spec:
   serviceType: ClusterIP
   version: v1.0.0
   namespace: iwiick-brean-and-brew-dev
-  serviceAccountName: sd-sdsdf
+  serviceAccountName: service-account-3
