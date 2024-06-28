@@ -15,7 +15,13 @@ spec:
       memoryLimitMb: 450
       args: []
       command: []
-      configMounts: []
+      configMounts:
+        - configMapName: test
+          isEnv: false
+          isFile: true
+          key: fgf
+          mountPath: test
+          secretName: ''
       applicationPorts:
         - port: 5002
           targetPort: 5002
