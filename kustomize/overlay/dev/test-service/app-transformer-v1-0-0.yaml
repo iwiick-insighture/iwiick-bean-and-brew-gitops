@@ -49,4 +49,4 @@ spec:
   serviceType: ClusterIP
   version: v1.0.0
   namespace: iwiick-brean-and-brew-dev
-  serviceAccountName: service-account-3
+  serviceAccountName: sameera-service-account1
