@@ -20,6 +20,14 @@ spec:
       name: cart-main
       imagePullPolicy: Always
       credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
+      imageTag: 42984f625285a3a254f55e91d258c7477b9e5bfb
+      imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/cart
+      commitDetails:
+        commitHash: 42984f625285a3a254f55e91d258c7477b9e5bfb
+        commitTime: ''
+        commitUser: ''
+        commitAvatar: https://github.com/.png
+        commitMessage: Deploy cart to dev
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
