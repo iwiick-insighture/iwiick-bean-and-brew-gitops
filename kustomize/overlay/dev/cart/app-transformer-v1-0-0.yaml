@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: b6d47717c6010601cb386d2f92d43382ff978e96
+    - imageTag: 66a1f0161362dbded8b2b631db9a2c151a23e528
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -28,10 +28,10 @@ spec:
       imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/cart
       credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
       commitDetails:
-        commitHash: b6d47717c6010601cb386d2f92d43382ff978e96
+        commitHash: 66a1f0161362dbded8b2b631db9a2c151a23e528
         commitAvatar: https://github.com/skyu-v2-dev[bot].png
-        commitTime: '2024-07-06T09:10:32Z'
-        commitMessage: container-dev_app_3203294_env_31ddbbd.yaml Updated
+        commitTime: '2024-07-06T09:10:30Z'
+        commitMessage: container-prod_app_3203294_env_055fba9.yaml Updated
         commitUser: skyu-v2-dev[bot]
   minReplicas: 1
   maxReplicas: 1
