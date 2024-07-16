@@ -1,0 +1,70 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: insightstest-v1-0-0
+  namespace: iwiick-brean-and-brew-prod
+  labels:
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    environmentId: env_055fba93-58d5-43d7-aaad-c684411e22b9
+    applicaitonId: app_1c7727d0-e5a2-4454-b520-c8522cba2a42
+spec:
+  interval: 5m0s
+  chart:
+    spec:
+      chart: bitnami/airflow/Chart.yaml
+      sourceRef:
+        kind: GitRepository
+        name: insightstest-v1-0-0
+        namespace: iwiick-brean-and-brew-prod
+  values:
+    annotations:
+      category: WorkFlow
+      licenses: Apache-2.0
+      images: |
+        - name: airflow
+          image: docker.io/bitnami/airflow:2.9.2-debian-12-r1
+        - name: airflow-exporter
+          image: docker.io/bitnami/airflow-exporter:0.20220314.0-debian-12-r35
+        - name: airflow-scheduler
+          image: docker.io/bitnami/airflow-scheduler:2.9.2-debian-12-r0
+        - name: airflow-worker
+          image: docker.io/bitnami/airflow-worker:2.9.2-debian-12-r0
+        - name: git
+          image: docker.io/bitnami/git:2.45.2-debian-12-r0
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r22
+    apiVersion: v2
+    appVersion: 2.9.2
+    dependencies:
+      - condition: redis.enabled
+        name: redis
+        repository: oci://registry-1.docker.io/bitnamicharts
+        version: 19.x.x
+      - condition: postgresql.enabled
+        name: postgresql
+        repository: oci://registry-1.docker.io/bitnamicharts
+        version: 15.x.x
+      - name: common
+        repository: oci://registry-1.docker.io/bitnamicharts
+        tags:
+          - bitnami-common
+        version: 2.x.x
+    description: >-
+      Apache Airflow is a tool to express and execute workflows as directed
+      acyclic graphs (DAGs). It includes utilities to schedule tasks, monitor
+      task progress and handle task dependencies.
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/airflow/img/airflow-stack-220x234.png
+    keywords:
+      - apache
+      - airflow
+      - workflow
+      - dag
+    maintainers:
+      - name: Broadcom, Inc. All Rights Reserved.
+        url: https://github.com/bitnami/charts
+    name: airflow
+    sources:
+      - https://github.com/bitnami/charts/tree/main/bitnami/airflow
+    version: 18.3.4
