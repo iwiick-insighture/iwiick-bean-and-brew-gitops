@@ -15,7 +15,13 @@ spec:
       memoryLimitMb: 450
       args: []
       command: []
-      configMounts: []
+      configMounts:
+        - configMapName: ''
+          isEnv: false
+          isFile: true
+          key: config.json
+          mountPath: /config.json
+          secretName: test-config
       applicationPorts: []
       healthChecks: []
       name: order-main
