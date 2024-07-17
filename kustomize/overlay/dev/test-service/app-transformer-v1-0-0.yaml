@@ -15,7 +15,13 @@ spec:
       memoryLimitMb: 450
       args: []
       command: []
-      configMounts: []
+      configMounts:
+        - configMapName: ''
+          isEnv: false
+          isFile: true
+          key: sdsd
+          mountPath: sdsdsd
+          secretName: sdsd
       applicationPorts: []
       healthChecks: []
       name: test-service-main
