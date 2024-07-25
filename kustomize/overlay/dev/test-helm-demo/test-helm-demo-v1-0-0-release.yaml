@@ -17,4 +17,7 @@ spec:
         kind: GitRepository
         name: test-helm-demo-v1-0-0
         namespace: iwiick-brean-and-brew-dev
-  values: {}
+  values:
+    dags:
+      image:
+        tag: 7cfe13e2ed8d570c254a7d9ae8b875e002b199d1
