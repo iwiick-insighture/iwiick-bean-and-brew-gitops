@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: iwiick-cred-check-2-v1-0-0
+    applicationId: app_c27452a3-4bd0-4299-a175-9d9df40a41f3
+    version: v1.0.0
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    environmentId: env_1a87bd72-0386-4592-aa0d-74a082510bbc
+  name: iwiick-cred-check-2-v1-0-0
+spec:
+  selector:
+    app: iwiick-cred-check-2-v1-0-0
