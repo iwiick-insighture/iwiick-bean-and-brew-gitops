@@ -20,4 +20,4 @@ spec:
   values:
     dags:
       image:
-        tag: 7cfe13e2ed8d570c254a7d9ae8b875e002b199d1
+        tag: 3eb60ab5ea1772985961f8efbc705554bda566a2
