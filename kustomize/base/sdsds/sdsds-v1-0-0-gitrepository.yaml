@@ -1,0 +1,15 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: sdsds-v1-0-0
+  labels:
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    applicaitonId: app_e3f985af-b90c-4294-9646-81b22800e8e3
+spec:
+  interval: 1m0s
+  url: https://github.com/sameera-insighture/mini-microservices-blog
+  ref:
+    branch: master
+  secretRef:
+    name: sdsds-v1-0-0-secret
