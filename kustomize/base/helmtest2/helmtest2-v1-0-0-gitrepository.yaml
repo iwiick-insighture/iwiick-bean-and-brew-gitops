@@ -1,0 +1,15 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: helmtest2-v1-0-0
+  labels:
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    applicaitonId: app_3dbb3f23-b492-4fef-8777-a0291a790eef
+spec:
+  interval: 1m0s
+  url: https://github.com/sameera-insighture/kubekon-rubik-challenge-2024-05-29
+  ref:
+    branch: main
+  secretRef:
+    name: helmtest2-v1-0-0-secret

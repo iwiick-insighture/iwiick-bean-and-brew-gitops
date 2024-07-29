@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: helmtest2-v1-0-0
+  namespace: iwiick-brean-and-brew-staging
+  labels:
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    environmentId: env_1a87bd72-0386-4592-aa0d-74a082510bbc
+    applicaitonId: app_3dbb3f23-b492-4fef-8777-a0291a790eef
+spec:
+  interval: 5m0s
+  chart:
+    spec:
+      chart: Dockerfile
+      sourceRef:
+        kind: GitRepository
+        name: helmtest2-v1-0-0
+        namespace: iwiick-brean-and-brew-staging
+      valuesFiles:
+        - docs/docs.go
+        - services/email.go
+  values: {}
