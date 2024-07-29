@@ -1,0 +1,22 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: hrlmtest-v1-0-0
+  namespace: iwiick-brean-and-brew-prod
+  labels:
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    environmentId: env_055fba93-58d5-43d7-aaad-c684411e22b9
+    applicaitonId: app_5567dc03-fc8a-4147-88c7-ee57404ffb8f
+spec:
+  interval: 5m0s
+  chart:
+    spec:
+      chart: Dockerfile
+      sourceRef:
+        kind: GitRepository
+        name: hrlmtest-v1-0-0
+        namespace: iwiick-brean-and-brew-prod
+      valuesFiles:
+        - docs/docs.go
+  values: {}
