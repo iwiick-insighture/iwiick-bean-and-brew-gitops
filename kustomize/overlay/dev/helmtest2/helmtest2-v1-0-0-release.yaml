@@ -20,5 +20,4 @@ spec:
       valuesFiles:
         - docs/docs.go
         - docs/swagger.json
-  values:
-    vaultRoleId: 3a9d4c5f-f83f-8d77-85fc-c5ada41591f6
+  values: {}
