@@ -20,14 +20,14 @@ spec:
       name: cart-main
       imagePullPolicy: Always
       credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
-      imageTag: 71f1502a998b4e8617495e83be36b78f134065b2
+      imageTag: 5f127ffc142603954df0dd658480972d33cd2f30
       imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/cart
       commitDetails:
-        commitHash: 71f1502a998b4e8617495e83be36b78f134065b2
+        commitHash: 5f127ffc142603954df0dd658480972d33cd2f30
         commitTime: ''
         commitUser: ''
         commitAvatar: https://github.com/.png
-        commitMessage: Deploy cart to dev
+        commitMessage: container-dev_app_3203294_env_31ddbbd.yaml Updated
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
