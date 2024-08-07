@@ -1,0 +1,153 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: testhelm-v1-0-0
+  namespace: iwiick-brean-and-brew-prod
+  labels:
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    environmentId: env_055fba93-58d5-43d7-aaad-c684411e22b9
+    applicaitonId: app_de6d26f4-2786-4ba1-8da1-3743d931646c
+spec:
+  interval: 5m0s
+  chart:
+    spec:
+      chart: .gitignore
+      sourceRef:
+        kind: GitRepository
+        name: testhelm-v1-0-0
+        namespace: iwiick-brean-and-brew-prod
+      valuesFiles:
+        - agent.proto
+        - server.js
+  values: {}
+  valuesFrom:
+    - kind: Secret
+      name: testhelm-v1-0-0-prod-secret
+      valuesKey: test
+      targetPath: test
+  postRenderers:
+    - kustomize:
+        patches:
+          - target:
+              group: apps
+              version: v1
+              kind: Deployment
+              name: testhelm-v1-0-0
+            patch: |
+              - op: add
+                path: /spec/template/metadata/labels/organizationId
+                value: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+              - op: add
+                path: /spec/template/metadata/labels/projectId
+                value: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+              - op: add
+                path: /spec/template/metadata/labels/applicationId
+                value: app_de6d26f4-2786-4ba1-8da1-3743d931646c
+              - op: add
+                path: /spec/template/metadata/labels/environmentId
+                value: env_055fba93-58d5-43d7-aaad-c684411e22b9
+              - op: add
+                path: /spec/template/metadata/labels/version
+                value: v1.0.0
+          - target: {}
+            patch: |
+              - op: add
+                path: /metadata/labels/organizationId
+                value: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+              - op: add
+                path: /metadata/labels/projectId
+                value: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+              - op: add
+                path: /metadata/labels/applicationId
+                value: app_de6d26f4-2786-4ba1-8da1-3743d931646c
+              - op: add
+                path: /metadata/labels/environmentId
+                value: env_055fba93-58d5-43d7-aaad-c684411e22b9
+              - op: add
+                path: /metadata/labels/version
+                value: v1.0.0
+          - target:
+              group: batch
+              version: v1
+              kind: Job
+              name: testhelm-v1-0-0
+            patch: |
+              - op: add
+                path: /spec/template/metadata/labels/organizationId
+                value: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+              - op: add
+                path: /spec/template/metadata/labels/projectId
+                value: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+              - op: add
+                path: /spec/template/metadata/labels/applicationId
+                value: app_de6d26f4-2786-4ba1-8da1-3743d931646c
+              - op: add
+                path: /spec/template/metadata/labels/environmentId
+                value: env_055fba93-58d5-43d7-aaad-c684411e22b9
+              - op: add
+                path: /spec/template/metadata/labels/version
+                value: v1.0.0
+          - target:
+              group: batch
+              version: v1
+              kind: CronJob
+              name: testhelm-v1-0-0
+            patch: |
+              - op: add
+                path: /spec/jobTemplate/metadata/labels/organizationId
+                value: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+              - op: add
+                path: /spec/jobTemplate/metadata/labels/projectId
+                value: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+              - op: add
+                path: /spec/jobTemplate/metadata/labels/applicationId
+                value: app_de6d26f4-2786-4ba1-8da1-3743d931646c
+              - op: add
+                path: /spec/jobTemplate/metadata/labels/environmentId
+                value: env_055fba93-58d5-43d7-aaad-c684411e22b9
+              - op: add
+                path: /spec/jobTemplate/metadata/labels/version
+                value: v1.0.0
+          - target:
+              group: batch
+              version: v1
+              kind: CronJob
+              name: testhelm-v1-0-0
+            patch: |
+              - op: add
+                path: /spec/jobTemplate/spec/template/metadata/labels/organizationId
+                value: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+              - op: add
+                path: /spec/jobTemplate/spec/template/metadata/labels/projectId
+                value: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+              - op: add
+                path: /spec/jobTemplate/spec/template/metadata/labels/applicationId
+                value: app_de6d26f4-2786-4ba1-8da1-3743d931646c
+              - op: add
+                path: /spec/jobTemplate/spec/template/metadata/labels/environmentId
+                value: env_055fba93-58d5-43d7-aaad-c684411e22b9
+              - op: add
+                path: /spec/jobTemplate/spec/template/metadata/labels/version
+                value: v1.0.0
+          - target:
+              group: apps
+              version: v1
+              kind: StatefulSet
+              name: testhelm-v1-0-0
+            patch: |
+              - op: add
+                path: /spec/template/metadata/labels/organizationId
+                value: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+              - op: add
+                path: /spec/template/metadata/labels/projectId
+                value: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+              - op: add
+                path: /spec/template/metadata/labels/applicationId
+                value: app_de6d26f4-2786-4ba1-8da1-3743d931646c
+              - op: add
+                path: /spec/template/metadata/labels/environmentId
+                value: env_055fba93-58d5-43d7-aaad-c684411e22b9
+              - op: add
+                path: /spec/template/metadata/labels/version
+                value: v1.0.0
