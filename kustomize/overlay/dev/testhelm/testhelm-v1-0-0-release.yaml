@@ -1,5 +1,5 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
-kind: HelmRelease test
+kind: HelmRelease test 123
 metadata:
   name: testhelm-v1-0-0
   namespace: iwiick-brean-and-brew-dev
