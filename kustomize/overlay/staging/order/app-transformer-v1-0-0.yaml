@@ -20,6 +20,14 @@ spec:
       name: order-main
       imagePullPolicy: Always
       credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
+      imageTag: 88874b21bfeb183b89519de840b3eb5007422697
+      imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/order
+      commitDetails:
+        commitHash: 88874b21bfeb183b89519de840b3eb5007422697
+        commitAvatar: https://github.com/.png
+        commitTime: ''
+        commitMessage: ''
+        commitUser: ''
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
