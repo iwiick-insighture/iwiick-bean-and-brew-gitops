@@ -15,7 +15,13 @@ spec:
       memoryLimitMb: 450
       args: []
       command: []
-      configMounts: []
+      configMounts:
+        - configMapName: qq
+          isEnv: false
+          isFile: true
+          key: ada
+          mountPath: /eq
+          secretName: ''
       applicationPorts:
         - port: 5002
           targetPort: 5002
