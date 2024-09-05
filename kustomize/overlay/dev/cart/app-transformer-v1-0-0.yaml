@@ -39,6 +39,17 @@ spec:
         commitTime: '2024-08-21T10:34:21Z'
         commitMessage: Update swagger documentation
         commitUser: skyu-v2-dev[bot]
+    - name: tempcont
+      imagePullPolicy: Always
+      imageRegistry: dfdf
+      imageTag: fdfdf
+      applicationPorts: []
+      cpuRequestMili: 100
+      cpuLimitMili: 2000
+      memoryRequestMb: 100
+      memoryLimitMb: 1000
+      command: []
+      args: []
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
