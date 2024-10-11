@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: iwiick-app-101-v1-0-0
+    applicationId: app_ff8a56d6-455b-4ddd-b87a-76fcf593db1c
+    version: v1.0.0
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    environmentId: env_31ddbbde-7bfc-4d60-89f4-920f8e416be0
+  name: iwiick-app-101-v1-0-0
+spec:
+  selector:
+    app: iwiick-app-101-v1-0-0
