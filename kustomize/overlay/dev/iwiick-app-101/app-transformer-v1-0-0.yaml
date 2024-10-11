@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: latest
+    - imageTag: e59847f3a1ef15acb62f3d6cd4f828a49102ab9c
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -23,6 +23,12 @@ spec:
       imageRegistry: docker.io/iwiick/iwiick-app-101
       imagePullSecretName: imagepull-docker
       credentialId: credential_e030347c-43b5-43fa-8f7b-2d3a1d41f90b
+      commitDetails:
+        commitHash: e59847f3a1ef15acb62f3d6cd4f828a49102ab9c
+        commitAvatar: https://github.com/.png
+        commitTime: ''
+        commitMessage: ''
+        commitUser: ''
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
