@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-pasan-bitbucket-v1-0-0
+  labels:
+    app: test-pasan-bitbucket-v1-0-0
+    applicationId: app_fc0b8e29-c128-41a1-980a-3aabb0b258c1
+    version: v1.0.0
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    environmentId: env_055fba93-58d5-43d7-aaad-c684411e22b9
+  annotations:
+    reloader.stakater.com/auto: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: test-pasan-bitbucket-v1-0-0
+  template:
+    metadata:
+      labels:
+        app: test-pasan-bitbucket-v1-0-0
+        applicationId: app_fc0b8e29-c128-41a1-980a-3aabb0b258c1
+        version: v1.0.0
+        organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+        projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+        environmentId: env_055fba93-58d5-43d7-aaad-c684411e22b9

@@ -1,0 +1,48 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts:
+        - port: 80
+          targetPort: 8000
+          protocol: TCP
+      healthChecks: []
+      name: test-pasan-bitbucket-main
+      imagePullPolicy: Always
+      imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/test-pasan-bitbucket-image
+      credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: test-pasan-bitbucket
+    version: v1.0.0
+    applicationId: app_fc0b8e29-c128-41a1-980a-3aabb0b258c1
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    environmentId: env_1a87bd72-0386-4592-aa0d-74a082510bbc
+    environmentName: staging
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: Deployment
+  name: test-pasan-bitbucket
+  serviceType: ClusterIP
+  version: v1.0.0
+  namespace: iwiick-brean-and-brew-staging
