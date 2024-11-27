@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: 2fd1609f0b5b30e2047101b7b5dfee13bed4ce04
+    - imageTag: 78dba85050be58f65a5a8f2aff73dbf2608611e1
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -23,7 +23,7 @@ spec:
       imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/bit-chh
       credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
       commitDetails:
-        commitHash: 2fd1609f0b5b30e2047101b7b5dfee13bed4ce04
+        commitHash: 78dba85050be58f65a5a8f2aff73dbf2608611e1
         commitAvatar: https://github.com/.png
         commitTime: ''
         commitMessage: bitbucket-pipelines.yml Updated
