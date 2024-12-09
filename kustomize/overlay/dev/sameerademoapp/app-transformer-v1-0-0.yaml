@@ -15,7 +15,13 @@ spec:
       memoryLimitMb: 450
       args: []
       command: []
-      configMounts: []
+      configMounts:
+        - configMapName: dfgdfg
+          isEnv: false
+          isFile: true
+          key: dfgdf
+          mountPath: dfgdfg
+          secretName: ''
       applicationPorts: []
       healthChecks: []
       name: sameerademoapp-main
