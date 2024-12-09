@@ -22,6 +22,16 @@ spec:
       imagePullPolicy: Always
       imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/sameera-demo-cronjob-app
       credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
+    - name: dfgfg
+      imagePullPolicy: Always
+      imageRegistry: dfgdfg
+      applicationPorts: []
+      cpuRequestMili: 100
+      cpuLimitMili: 2000
+      memoryRequestMb: 100
+      memoryLimitMb: 1000
+      command: []
+      args: []
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
