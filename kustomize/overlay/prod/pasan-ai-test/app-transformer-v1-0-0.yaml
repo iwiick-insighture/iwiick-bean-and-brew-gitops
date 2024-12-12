@@ -1,0 +1,45 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts: []
+      healthChecks: []
+      name: pasan-ai-test-main
+      imagePullPolicy: Always
+      imageRegistry: 272133924862.dkr.ecr.us-east-1.amazonaws.com/pasan-ai-test
+      credentialId: credential_0d2b12d4-51b2-458e-b30d-2aec45476070
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: pasan-ai-test
+    version: v1.0.0
+    applicationId: app_0e790088-e961-46d8-b44b-0448f87fa8dc
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    environmentId: env_055fba93-58d5-43d7-aaad-c684411e22b9
+    environmentName: prod
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: Deployment
+  name: pasan-ai-test
+  serviceType: ClusterIP
+  version: v1.0.0
+  namespace: iwiick-brean-and-brew-prod
