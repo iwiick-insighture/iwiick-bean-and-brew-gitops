@@ -1,0 +1,17 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations: {}
+  name: suranji-test-coffee-order-svc-v1-0-0
+  labels:
+    app: suranji-test-coffee-order-svc-v1-0-0
+    applicationId: app_73c4975c-b1d9-427a-b702-17dd365849c8
+    version: v1.0.0
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    environmentId: env_055fba93-58d5-43d7-aaad-c684411e22b9
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: suranji-test-coffee-order-svc-v1-0-0
