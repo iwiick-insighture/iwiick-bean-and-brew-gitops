@@ -1,0 +1,46 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts: []
+      healthChecks: []
+      name: ai-service-amaan-main
+      imagePullPolicy: Always
+      imageRegistry: docker.io/iwiick/ai-service-amaan
+      imagePullSecretName: imagepull-docker
+      credentialId: credential_e030347c-43b5-43fa-8f7b-2d3a1d41f90b
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: ai-service-amaan
+    version: v1.0.0
+    applicationId: app_dddc481e-86f5-4235-ba42-38f3f340ed47
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    environmentId: env_31ddbbde-7bfc-4d60-89f4-920f8e416be0
+    environmentName: dev
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: Deployment
+  name: ai-service-amaan
+  serviceType: ClusterIP
+  version: v1.0.0
+  namespace: iwiick-brean-and-brew-dev
