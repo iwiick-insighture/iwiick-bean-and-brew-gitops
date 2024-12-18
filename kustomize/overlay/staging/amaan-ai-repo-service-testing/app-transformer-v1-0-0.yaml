@@ -32,7 +32,7 @@ spec:
   labels:
     app: amaan-ai-repo-service-testing
     version: v1.0.0
-    applicationId: app_59b0372d-dfe5-4b4a-8e5a-4d98bb38149f
+    applicationId: app_0d25f796-ee6a-48a4-add4-4f9809486572
     projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
     organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
     environmentId: env_1a87bd72-0386-4592-aa0d-74a082510bbc
