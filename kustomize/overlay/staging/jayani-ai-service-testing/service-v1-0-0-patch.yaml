@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: jayani-ai-service-testing-v1-0-0
+    applicationId: app_eda38f82-0c87-4299-b747-a0d4d315e1db
+    version: v1.0.0
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_78bf2621-6ba3-4cd7-963a-058179ce0ef9
+    environmentId: env_1a87bd72-0386-4592-aa0d-74a082510bbc
+  name: jayani-ai-service-testing-v1-0-0
+spec:
+  selector:
+    app: jayani-ai-service-testing-v1-0-0
